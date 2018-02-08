@@ -4,12 +4,36 @@
         <meta charset="UTF-8">
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
         <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link type="text/css" rel="stylesheet" href="style.css">
 
         <title>Pig Game</title>
     </head>
 
     <body>
+
+        <div class="rules"><button class="btn-rules">Rules</button></div>
+
+        <!-- Modal window -->
+        <div class="modal fade" id="rulesModal" role="dialog">
+            <div class="modal-dialog" role="content">
+                <div class="modal-content">
+                  <div class="modal-header">
+                      <h4 class="modal-title">HOW TO PLAY</h4>
+                      <button class="close" type="button" data-dismiss="modal">&times;</button>
+                  </div>
+
+                  <div class="modal-body">
+                      <p>The game has 2 players, playing in rounds
+                        In each turn, a player rolls a dice as many times as he whishes. Each result get added to his ROUND score
+                        BUT, if the player rolls a 1, all his <strong>ROUND</strong> score gets lost. After that, it's the next player's turn. The other case when player rolls two 6 in a row, he loses all scored points including GLOBAL.
+                        The player can choose to 'Hold', which means that his ROUND score gets added to his GLOBAL score. After that, it's the next player's turn.
+                        The first player to reach 100 points on GLOBAL score wins the game</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+
         <div class="wrapper clearfix">
             <div class="player-0-panel active">
                 <div class="player-name" id="name-0">Player 1</div>
@@ -38,6 +62,9 @@
             <img src="dice-5.png" alt="Dice" class="dice">
         </div>
 
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/tether/dist/js/tether.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="app.js"></script>
     </body>
 </html>

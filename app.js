@@ -15,6 +15,12 @@ var lastDice;
 
 init();
 
+$(document).ready(function () {
+  $('.btn-rules').click(function() {
+		$('#rulesModal').modal('show');
+	});
+});
+
 document.querySelector('.btn-roll').addEventListener('click', function() {
     if(gameOn) {
         // 1. Random number
@@ -56,7 +62,7 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
         var winningScore;
 
         // Undefined, 0, null or "" are COERCED to false
-        // Anything else is COERCED to true 
+        // Anything else is COERCED to true
 
         input ? winningScore = input : winningScore = 100;
 
