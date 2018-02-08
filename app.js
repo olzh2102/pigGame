@@ -22,8 +22,8 @@ document.getElementById('score-1').textContent = '0';
 document.getElementById('current-0').textContent = '0';
 document.getElementById('current-1').textContent = '0';
 
-var buttonRoll = document.querySelector('.btn-roll');
-buttonRoll.addEventListener('click', function() {
+var buttonRoller = document.querySelector('.btn-roll');
+buttonRoller.addEventListener('click', function() {
 	// 1. Random number
 	var dice = Math.floor(Math.random() * 6) + 1;
 
@@ -50,4 +50,13 @@ buttonRoll.addEventListener('click', function() {
 
 		diceDOM.style.display = 'none';
 	}
-})
+});
+
+var buttonHolder = document.querySelector('.btn-hold');
+buttonHolder.addEventListener('click', function() {
+	// Add current score to GLOBAL score
+
+	// Update User Interface
+
+	// Check if the player win the game
+});
