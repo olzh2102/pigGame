@@ -127,6 +127,24 @@ button:focus {
     outline: none;
 }
 
+.final-score {
+  position: absolute;
+  top: 520px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #555;
+  font-size: 18px;
+  font-family: 'Lato';
+  text-align: center;
+  width: 160px;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.final-score {
+  outline: none;
+}
+
 i {
     color: #114;
     display: inline-block;
